@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        
+        //Q1
+        int [] grades = {65,70,75,80,85,90,95};
+        try {
+            for (int grade : grades) {
+                System.out.println(grades[7]);
+            }//for
+        }
+        catch (ArrayIndexOutOfBoundsException e ){
+            System.out.println(e.getMessage());
+        }
+        catch ( Exception e ) {
+            System.out.println(e.getMessage());
+        }
+
+        //Q2
+        Scanner input = new Scanner(System.in);
+        System.out.println("enter a number: ");
+        int num = input.nextInt();
+        check(num);
+
+
+    }//end main
+
+    public static void check (int num ){
+        try {
+            if (num < 1 || num > 3 ) //(num < 1 && num > 3)
+                throw new Exception("valid input");
+        }
+        catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+    }//check
+
+}//end class
